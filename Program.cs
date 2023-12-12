@@ -1,6 +1,8 @@
-﻿Console.Write("Введите размер массива");
+﻿Console.Write("Введите размер массива ");
 int n = Convert.ToInt32(Console.ReadLine());
 string[] strings = new string[n];
+
+FillArray(strings);
 
 void FillArray(string[] str)
 {
@@ -18,3 +20,7 @@ void FillArray(string[] str)
         }
     }
 }
+
+string[] newStrings = strings.Where(x => x.Length < 4).ToArray();
+
+Console.WriteLine(string.Join(", ", newStrings));
