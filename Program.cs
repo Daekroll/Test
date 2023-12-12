@@ -1,10 +1,10 @@
 ﻿Console.Write("Введите размер массива ");
-int n = Convert.ToInt32(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine()); //Запрашиваем размер массива у пользователя
 string[] strings = new string[n];
 
-FillArray(strings);
+FillArray(strings); 
 
-void FillArray(string[] str)
+void FillArray(string[] str) //Метод которвый позволяет пользователю заполнить массив произвольными значениям
 {
     for (int i = 0; i < str.Length; i++)
     {
@@ -21,6 +21,6 @@ void FillArray(string[] str)
     }
 }
 
-string[] newStrings = strings.Where(x => x.Length < 4).ToArray();
+string[] newStrings = strings.Where(x => x.Length < 4).ToArray(); // Заполняем новый массив только теми значениями которые удовлетворяют нашим требованиям
 
-Console.WriteLine(string.Join(", ", newStrings));
+Console.WriteLine(string.Join(", ", newStrings)); //Выводим новый массив в терминал
